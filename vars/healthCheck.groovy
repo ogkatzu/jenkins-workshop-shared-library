@@ -16,6 +16,7 @@ def call(Map config = [:]) {
                 script: "curl -o /dev/null -s -w '%{http_code}' ${url}",
                 returnStdout: true
             ).trim()
+            echo "Response code is ${responseCode}"
             if(responseCode == '200') {
                 echo "Health check passed"
                 return true
