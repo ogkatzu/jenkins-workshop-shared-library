@@ -32,5 +32,5 @@ def call(Map config = [:]) {
                 sleep delayTime    
         }
     }
-    echo "Health check failed after ${maxRetries} attempts"
+    error "Health check failed after ${maxRetries} attempts"
 }
