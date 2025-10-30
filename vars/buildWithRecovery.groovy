@@ -13,7 +13,6 @@ def call(Map config = [:]) {
             echo "Build successful on retry"
         } catch (Exception retryerror) {
             echo "retry also failed"
-            throw retryerror
         }
     }
     finally {
